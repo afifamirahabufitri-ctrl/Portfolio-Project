@@ -1,6 +1,6 @@
 -- BUSINESS STYLE QUERY --
 
-1. Find Top Performing Student in Each Grade
+1. Top Performing Student in Each Grade
 
 WITH total_marks AS (
     SELECT 
