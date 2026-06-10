@@ -40,3 +40,14 @@ School administrators would like to identify the best-performing student in each
 ✅ PARTITION BY
 ✅ Top-N Analysis
 ✅ Ranking within Groups
+
+
+
+
+
+
+
+
+
+
+Tools Used : MySQL Workbench
