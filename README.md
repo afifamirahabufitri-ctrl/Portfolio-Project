@@ -41,8 +41,9 @@ School administrators would like to identify the best-performing student in each
 ✅ Top-N Analysis
 ✅ Ranking within Groups
 
+2. **Average Score by Gender**
 
-
+3. 
 
 
 
