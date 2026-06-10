@@ -42,6 +42,7 @@ School administrators would like to identify the best-performing student in each
 ✅ Ranking within Groups
 
 2. **Average Score by Gender**
+
 This query uses a Common Table Expression (CTE) and Window Function (RANK()) to calculate each student's total score across subjects and rank students within their respective grade levels. The final result returns the highest-performing student(s) from each grade, enabling grade-level performance benchmarking and recognition of top achievers.
 
 4. 
