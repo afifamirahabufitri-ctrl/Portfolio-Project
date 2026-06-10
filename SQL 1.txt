@@ -1,0 +1,28 @@
+-- BUSINESS STYLE QUERY --
+
+1. Find Top Performing Student in Each Grade
+
+WITH total_marks AS (
+    SELECT 
+        sd.grade,
+        sd.student_id,
+        sd.first_name,
+        SUM(ss.score) AS total_score
+    FROM student_details sd
+    JOIN student_score ss
+        ON sd.student_id = ss.student_id
+    GROUP BY 
+        sd.grade,
+        sd.student_id,
+        sd.first_name
+)
+SELECT *
+FROM (
+    SELECT *,
+           RANK() OVER(
+               PARTITION BY grade
+               ORDER BY total_score DESC
+           ) AS ranking
+    FROM total_marks
+) ranked
+WHERE ranking = 1;
