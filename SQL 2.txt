@@ -1,0 +1,24 @@
+2. Average Score by Gender
+SELECT
+    gender,
+    ROUND(AVG(score),2) AS average_score
+FROM student_details sd
+JOIN student_score ss
+    ON sd.student_id = ss.student_id
+GROUP BY gender;
+Student Ranking
+WITH total_scores AS (
+    SELECT
+        student_id,
+        SUM(score) AS total_score
+    FROM student_score
+    GROUP BY student_id
+)
+
+SELECT
+    student_id,
+    total_score,
+    RANK() OVER(
+        ORDER BY total_score DESC
+    ) AS ranking
+FROM total_scores;
